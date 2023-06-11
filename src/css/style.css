@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(240, 78%, 98%);
+    background-image: url(../images/bg-bottom.svg), url(../images/bg-top.svg);
+    background-repeat: no-repeat;
+    background-position: 0% 100%, 100% 0%;
+}
+
+.container .title {
+    color: hsl(233, 13%, 49%);
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.container .button {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.container .button {
+    color: hsl(234, 14%, 74%);
+    margin-bottom: 60px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(237, 63%, 64%);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    width: 350px;
+    height: 460px;
+}
+
+.card .type {
+    color: hsl(233, 13%, 49%);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.card .price {
+    color: hsl(232, 13%, 33%);
+    font-size: 65px;
+}
+
+.card .price span {
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.price,
+.storage,
+.users-allowed,
+.send {
+    color: hsl(233, 13%, 49%);
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+    width: 270px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    background: rgb(163, 168, 240);
+    background: linear-gradient(90deg, rgba(163, 168, 240, 1) 0%, rgba(105, 111, 221, 1) 100%);
+    width: 270px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.card.middle {
+    background: rgb(163, 168, 240);
+    background: linear-gradient(90deg, rgba(163, 168, 240, 1) 0%, rgba(105, 111, 221, 1) 100%);
+    height: 500px;
+}
+
+.card.middle .type,
+.card.middle .price,
+.card.middle .storage,
+.card.middle .users-allowed,
+.card.middle .send {
+    color: hsl(0, 0%, 100%);
+}
+
+.card.middle button {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 100%);
+    color: hsl(237, 63%, 64%);
+}
