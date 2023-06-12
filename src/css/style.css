@@ -59,6 +59,10 @@ body {
     transition: .4s;
 }
 
+.slider:hover{
+    opacity: 60%;
+}
+
 .slider:before {
     position: absolute;
     content: "";
@@ -145,6 +149,13 @@ button {
     letter-spacing: 2px;
     margin-top: 10px;
     cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+button:hover {
+    background: hsl(0, 0%, 100%);
+    border: 2px solid rgb(163, 168, 240);
+    color: rgb(163, 168, 240);
 }
 
 .card.middle {
@@ -165,4 +176,11 @@ button {
     background: rgb(255, 255, 255);
     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 100%);
     color: hsl(237, 63%, 64%);
+}
+
+.card.middle button:hover {
+    background: rgb(163, 168, 240);
+    background: linear-gradient(90deg, rgba(163, 168, 240, 1) 0%, rgba(105, 111, 221, 1) 100%);
+    border: 2px solid hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 100%);
 }
